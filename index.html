@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Discord Webhook Sender</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Simple Discord Webhook Sender</h1>
+    <form id="webhook-form">
+        <label for="webhookUrl">Webhook URL:</label>
+        <input type="url" id="webhookUrl" required>
+
+        <label for="botName">Bot Name:</label>
+        <input type="text" id="botName" placeholder="My Webhook Bot" required oninput="updatePreview()">
+       
+        <label for="avatarUrl">Profile Picture URL:</label>
+        <input type="url" id="avatarUrl" oninput="updatePreview()">
+
+        <label for="message">Message:</label>
+        <textarea id="message" required oninput="updatePreview()"></textarea>
+
+        <button type="button" onclick="sendWebhook()">Send Webhook</button>
+    </form>
+    <div class="preview">
+        <h2>Preview:</h2>
+        <div class="message-preview">
+            <img src="" id="previewAvatar" alt="Avatar" onerror="this.src='default_avatar.png'; this.onerror=null;">
+            <div class="preview-content">
+                <strong id="previewName">Bot Name</strong>
+                <p id="previewMessage">Your message will appear here...</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
