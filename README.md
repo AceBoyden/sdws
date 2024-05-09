@@ -1,7 +1,7 @@
 # SDWS
 **Note**
 
-Currently, the code is broken due to a preview issue, but it is still usable for sending messages to Discord channels. The preview feature will be fixed soon.
+Currently, the preview is slightly broken, but it is still  usable for sending messages to Discord channels. The preview feature  will be fixed soon.
 
 **Support**
 
